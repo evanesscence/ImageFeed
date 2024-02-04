@@ -61,6 +61,15 @@
 			path = ImageList;
 			sourceTree = "<group>";
 		};
+		9A3087BE2B6FD1790038DD9F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9A07157E2B6FA40400C5933A /* Fonts */,
+				9A42AFDD2B6E45F700572618 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		9A42AFC82B6E45F600572618 = {
 			isa = PBXGroup;
 			children = (
@@ -84,9 +93,8 @@
 				9A42AFD42B6E45F600572618 /* AppDelegate.swift */,
 				9A42AFD62B6E45F600572618 /* SceneDelegate.swift */,
 				9A42AFDA2B6E45F600572618 /* Main.storyboard */,
-				9A42AFDD2B6E45F700572618 /* Assets.xcassets */,
-				9A07157E2B6FA40400C5933A /* Fonts */,
 				9A42AFDF2B6E45F700572618 /* LaunchScreen.storyboard */,
+				9A3087BE2B6FD1790038DD9F /* Resources */,
 				9A42AFE22B6E45F700572618 /* Info.plist */,
 			);
 			path = ImageFeed;
