@@ -8,6 +8,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="YS Display-Regular.ttf">
+            <string>YandexSansDisplay-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--ImageList-->
         <scene sceneID="tne-QT-ifu">
@@ -20,6 +25,58 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Rbe-Oe-dAz">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" red="0.1019607843" green="0.1058823529" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImagesListCell" rowHeight="266" id="6Vb-p6-09Y" customClass="ImagesListCell" customModule="ImageFeed" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="266"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Vb-p6-09Y" id="lbJ-zZ-mkY">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="266"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="14" translatesAutoresizingMaskIntoConstraints="NO" id="npW-aU-h28" userLabel="image">
+                                                    <rect key="frame" x="16" y="4" width="361" height="258"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="16"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 февраля 2024" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6u-vA-yZ8">
+                                                    <rect key="frame" x="28" y="231.33333333333334" width="97" height="15.666666666666657"/>
+                                                    <fontDescription key="fontDescription" name="YandexSansDisplay-Regular" family="Yandex Sans Display" pointSize="13"/>
+                                                    <color key="textColor" name="YP White "/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhL-KP-JrA">
+                                                    <rect key="frame" x="331" y="11" width="42" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="42" id="AtJ-qj-0MG" userLabel="height = 44"/>
+                                                        <constraint firstAttribute="width" constant="42" id="wbh-88-13E" userLabel="width = 44"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="ActiveLikeButton"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="p6u-vA-yZ8" secondAttribute="bottom" constant="8" id="0ya-Z4-unS"/>
+                                                <constraint firstAttribute="trailing" secondItem="npW-aU-h28" secondAttribute="trailing" constant="16" id="9RR-Ca-MtN"/>
+                                                <constraint firstItem="KhL-KP-JrA" firstAttribute="top" secondItem="lbJ-zZ-mkY" secondAttribute="topMargin" id="FTk-Oa-cUQ"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="p6u-vA-yZ8" secondAttribute="trailing" id="LpR-6z-CNv"/>
+                                                <constraint firstItem="npW-aU-h28" firstAttribute="leading" secondItem="lbJ-zZ-mkY" secondAttribute="leading" constant="16" id="cEU-1g-JQq"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="KhL-KP-JrA" secondAttribute="trailing" id="dhy-70-IIV"/>
+                                                <constraint firstItem="p6u-vA-yZ8" firstAttribute="leading" secondItem="lbJ-zZ-mkY" secondAttribute="leadingMargin" constant="8" id="kmO-mH-2u3"/>
+                                                <constraint firstItem="npW-aU-h28" firstAttribute="top" secondItem="lbJ-zZ-mkY" secondAttribute="top" constant="4" id="uf4-Mj-HhQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="npW-aU-h28" secondAttribute="bottom" constant="4" id="wLI-52-IoX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="YP Black"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="bg2-3N-cT6"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="NmC-xP-GOH"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -37,12 +94,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="48" y="-2"/>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
+        <image name="14" width="200" height="133"/>
+        <image name="ActiveLikeButton" width="42" height="42"/>
         <namedColor name="YP Black">
             <color red="0.10199999809265137" green="0.10599999874830246" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="YP White ">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
