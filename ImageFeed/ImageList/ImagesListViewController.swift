@@ -29,7 +29,16 @@ class ImagesListViewController: UIViewController {
     }
     
     // MARK: - Internal methods
-    func configCell(for cell: ImagesListCell, with indexPath: IndexPath) { 
+    func linearGradient(view: UIView, topColor: UIColor, bottomColor: UIColor) {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.bounds
+        gradientLayer.cornerRadius = 16
+        gradientLayer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        gradientLayer.colors = [topColor.cgColor, bottomColor.cgColor]
+        view.layer.addSublayer (gradientLayer)
+    }
+    
+    func configCell(for cell: ImagesListCell, with indexPath: IndexPath) {
         guard let imageName = UIImage(named: photosName[indexPath.row]) else {
             return
         }
@@ -37,6 +46,8 @@ class ImagesListViewController: UIViewController {
         cell.imageCell.image = imageName
         cell.dateLabel.text = dateFormatter.string(from: Date())
         
+        linearGradient(view: cell.gradientView, topColor: .ypBlackAlpha0, bottomColor: .ypBlackAlpha20)
+    
         if indexPath.row % 2 == 0 {
             cell.likeButton.setImage(UIImage(named: "ActiveLikeButton"), for: .normal)
         } else {

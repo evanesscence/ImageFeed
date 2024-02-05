@@ -42,8 +42,14 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z6I-hQ-YYW">
+                                                    <rect key="frame" x="16" y="232" width="361" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="k1q-Nz-nz7"/>
+                                                    </constraints>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 февраля 2024" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6u-vA-yZ8">
-                                                    <rect key="frame" x="24" y="238" width="94" height="16"/>
+                                                    <rect key="frame" x="24.000000000000007" y="238" width="93.666666666666686" height="16"/>
                                                     <fontDescription key="fontDescription" name="YandexSansDisplay-Regular" family="Yandex Sans Display" pointSize="13"/>
                                                     <color key="textColor" name="YP White "/>
                                                     <nil key="highlightedColor"/>
@@ -55,9 +61,12 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="npW-aU-h28" firstAttribute="bottom" secondItem="z6I-hQ-YYW" secondAttribute="bottom" id="3Fe-0r-Vi0"/>
                                                 <constraint firstItem="p6u-vA-yZ8" firstAttribute="leading" secondItem="npW-aU-h28" secondAttribute="leading" constant="8" id="6KG-FD-g4B"/>
+                                                <constraint firstItem="npW-aU-h28" firstAttribute="trailing" secondItem="z6I-hQ-YYW" secondAttribute="trailing" id="6Zx-PN-EMO"/>
                                                 <constraint firstAttribute="trailing" secondItem="npW-aU-h28" secondAttribute="trailing" constant="16" id="9RR-Ca-MtN"/>
                                                 <constraint firstItem="KhL-KP-JrA" firstAttribute="trailing" secondItem="npW-aU-h28" secondAttribute="trailing" id="CoI-PT-hMw"/>
+                                                <constraint firstItem="z6I-hQ-YYW" firstAttribute="leading" secondItem="npW-aU-h28" secondAttribute="leading" id="Tbl-8I-2iJ"/>
                                                 <constraint firstItem="npW-aU-h28" firstAttribute="bottom" secondItem="p6u-vA-yZ8" secondAttribute="bottom" constant="8" id="Zcl-nj-NRg"/>
                                                 <constraint firstItem="npW-aU-h28" firstAttribute="leading" secondItem="lbJ-zZ-mkY" secondAttribute="leading" constant="16" id="cEU-1g-JQq"/>
                                                 <constraint firstItem="KhL-KP-JrA" firstAttribute="top" secondItem="npW-aU-h28" secondAttribute="top" id="eHw-JD-c8b"/>
@@ -69,6 +78,7 @@
                                         <color key="backgroundColor" name="YP Black"/>
                                         <connections>
                                             <outlet property="dateLabel" destination="p6u-vA-yZ8" id="YQv-MN-6OT"/>
+                                            <outlet property="gradientView" destination="z6I-hQ-YYW" id="Fjo-hh-tem"/>
                                             <outlet property="imageCell" destination="npW-aU-h28" id="sSK-I2-cvR"/>
                                             <outlet property="likeButton" destination="KhL-KP-JrA" id="d1M-wX-3zi"/>
                                         </connections>
