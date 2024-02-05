@@ -35,7 +35,7 @@ class ImagesListViewController: UIViewController {
         gradientLayer.cornerRadius = 16
         gradientLayer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         gradientLayer.colors = [topColor.cgColor, bottomColor.cgColor]
-        view.layer.addSublayer (gradientLayer)
+        view.layer.addSublayer(gradientLayer)
     }
     
     func configCell(for cell: ImagesListCell, with indexPath: IndexPath) {
