@@ -43,31 +43,27 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 февраля 2024" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6u-vA-yZ8">
-                                                    <rect key="frame" x="28.000000000000007" y="231.33333333333334" width="93.666666666666686" height="15.666666666666657"/>
+                                                    <rect key="frame" x="24" y="238" width="94" height="16"/>
                                                     <fontDescription key="fontDescription" name="YandexSansDisplay-Regular" family="Yandex Sans Display" pointSize="13"/>
                                                     <color key="textColor" name="YP White "/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhL-KP-JrA">
-                                                    <rect key="frame" x="331" y="11" width="42" height="42"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="42" id="AtJ-qj-0MG" userLabel="height = 44"/>
-                                                        <constraint firstAttribute="width" constant="42" id="wbh-88-13E" userLabel="width = 44"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="335" y="4" width="42" height="42"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" image="ActiveLikeButton"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="p6u-vA-yZ8" secondAttribute="bottom" constant="8" id="0ya-Z4-unS"/>
+                                                <constraint firstItem="p6u-vA-yZ8" firstAttribute="leading" secondItem="npW-aU-h28" secondAttribute="leading" constant="8" id="6KG-FD-g4B"/>
                                                 <constraint firstAttribute="trailing" secondItem="npW-aU-h28" secondAttribute="trailing" constant="16" id="9RR-Ca-MtN"/>
-                                                <constraint firstItem="KhL-KP-JrA" firstAttribute="top" secondItem="lbJ-zZ-mkY" secondAttribute="topMargin" id="FTk-Oa-cUQ"/>
-                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="p6u-vA-yZ8" secondAttribute="trailing" id="LpR-6z-CNv"/>
+                                                <constraint firstItem="KhL-KP-JrA" firstAttribute="trailing" secondItem="npW-aU-h28" secondAttribute="trailing" id="CoI-PT-hMw"/>
+                                                <constraint firstItem="npW-aU-h28" firstAttribute="bottom" secondItem="p6u-vA-yZ8" secondAttribute="bottom" constant="8" id="Zcl-nj-NRg"/>
                                                 <constraint firstItem="npW-aU-h28" firstAttribute="leading" secondItem="lbJ-zZ-mkY" secondAttribute="leading" constant="16" id="cEU-1g-JQq"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="KhL-KP-JrA" secondAttribute="trailing" id="dhy-70-IIV"/>
-                                                <constraint firstItem="p6u-vA-yZ8" firstAttribute="leading" secondItem="lbJ-zZ-mkY" secondAttribute="leadingMargin" constant="8" id="kmO-mH-2u3"/>
+                                                <constraint firstItem="KhL-KP-JrA" firstAttribute="top" secondItem="npW-aU-h28" secondAttribute="top" id="eHw-JD-c8b"/>
                                                 <constraint firstItem="npW-aU-h28" firstAttribute="top" secondItem="lbJ-zZ-mkY" secondAttribute="top" constant="4" id="uf4-Mj-HhQ"/>
                                                 <constraint firstAttribute="bottom" secondItem="npW-aU-h28" secondAttribute="bottom" constant="4" id="wLI-52-IoX"/>
+                                                <constraint firstItem="npW-aU-h28" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="p6u-vA-yZ8" secondAttribute="trailing" constant="8" id="yYm-Tv-O57"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="YP Black"/>
