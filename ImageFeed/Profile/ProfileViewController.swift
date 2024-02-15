@@ -11,6 +11,8 @@ final class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
     }
+    
     @IBAction private func logoutButton(_ sender: Any) {
+        
     }
 }
