@@ -91,6 +91,7 @@
 		9A42AFD32B6E45F600572618 /* ImageFeed */ = {
 			isa = PBXGroup;
 			children = (
+				9A7EEBC42B7E112D00F06244 /* Profile */,
 				9A0715852B6FB64A00C5933A /* ImageList */,
 				9A42AFD42B6E45F600572618 /* AppDelegate.swift */,
 				9A42AFD62B6E45F600572618 /* SceneDelegate.swift */,
@@ -98,9 +99,16 @@
 				9A42AFDF2B6E45F700572618 /* LaunchScreen.storyboard */,
 				9A3087BE2B6FD1790038DD9F /* Resources */,
 				9A42AFE22B6E45F700572618 /* Info.plist */,
-				9AFC09102B7DFF79009A3BAB /* ProfileViewController.swift */,
 			);
 			path = ImageFeed;
+			sourceTree = "<group>";
+		};
+		9A7EEBC42B7E112D00F06244 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				9AFC09102B7DFF79009A3BAB /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

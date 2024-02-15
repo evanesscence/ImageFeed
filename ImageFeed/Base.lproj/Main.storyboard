@@ -129,6 +129,9 @@
                                 <rect key="frame" x="353" y="114" width="24" height="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="logout_button"/>
+                                <connections>
+                                    <action selector="logoutButton:" destination="dL4-3x-U6V" eventType="touchUpInside" id="OCn-Sh-IyH"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Екатерина Новикова" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxc-pV-4Vk" userLabel="Name Label">
                                 <rect key="frame" x="16" y="169" width="361" height="27.666666666666657"/>
@@ -169,6 +172,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="descriptionLabel" destination="LXj-7d-7SA" id="oLX-Cc-CI2"/>
+                        <outlet property="loginLabel" destination="cFF-YO-4Js" id="oTl-1d-0aI"/>
+                        <outlet property="nameLabel" destination="mxc-pV-4Vk" id="aWH-lI-4nv"/>
                         <outlet property="profileImage" destination="bqa-av-F5G" id="qzE-FW-xug"/>
                     </connections>
                 </viewController>
