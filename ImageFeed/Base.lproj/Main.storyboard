@@ -36,7 +36,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="266"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="14" translatesAutoresizingMaskIntoConstraints="NO" id="npW-aU-h28" userLabel="image">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="npW-aU-h28" userLabel="image">
                                                     <rect key="frame" x="16" y="4" width="361" height="258"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -116,14 +116,31 @@
         <!--Single View Controller-->
         <scene sceneID="dSU-95-ZJY">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CKI-S3-p0e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController modalPresentationStyle="fullScreen" id="x3L-U3-Oto" customClass="SingleViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dzb-Sa-GS2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="14" translatesAutoresizingMaskIntoConstraints="NO" id="ODF-j2-JjV">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="QrC-DE-TLf">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                            </imageView>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="414" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="ODF-j2-JjV">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ODF-j2-JjV" secondAttribute="bottom" id="DsC-Jq-TAi"/>
+                                    <constraint firstItem="ODF-j2-JjV" firstAttribute="leading" secondItem="QrC-DE-TLf" secondAttribute="leading" id="S1Y-qy-7QF"/>
+                                    <constraint firstAttribute="trailing" secondItem="ODF-j2-JjV" secondAttribute="trailing" id="kvg-Ps-f9M"/>
+                                    <constraint firstItem="ODF-j2-JjV" firstAttribute="top" secondItem="QrC-DE-TLf" secondAttribute="top" id="pmr-je-Lm8"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="D05-2A-DvZ"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="bdQ-cq-MfN"/>
+                                <connections>
+                                    <outlet property="delegate" destination="x3L-U3-Oto" id="Wiq-CS-kVX"/>
+                                </connections>
+                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTy-l1-7Rs">
                                 <rect key="frame" x="8" y="8" width="48" height="48"/>
                                 <constraints>
@@ -136,26 +153,33 @@
                                     <action selector="backButton:" destination="x3L-U3-Oto" eventType="touchUpInside" id="DuS-3M-n5h"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhD-n3-E8y">
+                                <rect key="frame" x="173.66666666666666" y="786" width="46" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vib-Qm-VZG"/>
                         <color key="backgroundColor" name="YP Black"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="ODF-j2-JjV" secondAttribute="trailing" id="MUJ-NN-ev8"/>
-                            <constraint firstAttribute="bottom" secondItem="ODF-j2-JjV" secondAttribute="bottom" id="ban-zI-ggo"/>
+                            <constraint firstItem="QrC-DE-TLf" firstAttribute="top" secondItem="dzb-Sa-GS2" secondAttribute="top" id="64y-P9-8Ig"/>
+                            <constraint firstItem="Vib-Qm-VZG" firstAttribute="trailing" secondItem="QrC-DE-TLf" secondAttribute="trailing" id="GkJ-sb-sH9"/>
+                            <constraint firstItem="QrC-DE-TLf" firstAttribute="leading" secondItem="Vib-Qm-VZG" secondAttribute="leading" id="HFy-TE-dPI"/>
+                            <constraint firstItem="Vib-Qm-VZG" firstAttribute="bottom" secondItem="RhD-n3-E8y" secondAttribute="bottom" constant="36" id="IKn-Ol-aWI"/>
+                            <constraint firstItem="RhD-n3-E8y" firstAttribute="centerX" secondItem="Vib-Qm-VZG" secondAttribute="centerX" id="UGD-He-RtC"/>
+                            <constraint firstAttribute="bottom" secondItem="QrC-DE-TLf" secondAttribute="bottom" id="b8z-3d-jQR"/>
                             <constraint firstItem="pTy-l1-7Rs" firstAttribute="leading" secondItem="Vib-Qm-VZG" secondAttribute="leading" constant="8" id="fJ4-yR-Dcp"/>
                             <constraint firstItem="pTy-l1-7Rs" firstAttribute="top" secondItem="Vib-Qm-VZG" secondAttribute="top" constant="8" id="lim-2e-H8H"/>
-                            <constraint firstItem="ODF-j2-JjV" firstAttribute="leading" secondItem="dzb-Sa-GS2" secondAttribute="leading" id="qYJ-MP-Mca"/>
-                            <constraint firstItem="ODF-j2-JjV" firstAttribute="top" secondItem="dzb-Sa-GS2" secondAttribute="top" id="rhe-tj-NdF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="q5k-MM-OQw"/>
                     <connections>
                         <outlet property="imageView" destination="ODF-j2-JjV" id="hU0-n9-LLj"/>
+                        <outlet property="scrollView" destination="QrC-DE-TLf" id="FI4-sG-8DG"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CKI-S3-p0e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1900" y="-257"/>
+            <point key="canvasLocation" x="1900" y="-257.04225352112678"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="C1a-86-OMv">
@@ -193,7 +217,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXj-7d-7SA" userLabel="Description Label">
-                                <rect key="frame" x="16" y="227.66666666666666" width="361" height="15.666666666666657"/>
+                                <rect key="frame" x="16" y="227.66666666666666" width="361" height="16"/>
                                 <fontDescription key="fontDescription" name="YandexSansDisplay-Regular" family="Yandex Sans Display" pointSize="13"/>
                                 <color key="textColor" name="YP White "/>
                                 <nil key="highlightedColor"/>
@@ -255,7 +279,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="14" width="200" height="133"/>
+        <image name="0" width="200" height="132"/>
         <image name="ActiveLikeButton" width="42" height="42"/>
         <image name="avatar" width="70" height="70"/>
         <image name="backward" width="24" height="24"/>
