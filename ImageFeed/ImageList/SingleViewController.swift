@@ -26,6 +26,12 @@ final class SingleViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func didTapShareButton(_ sender: Any) {
+        guard let image = image else { return }
+        let sharing = UIActivityViewController(activityItems: [image], applicationActivities: [])
+        present(sharing, animated: true)
+    }
+    
     private func rescaleAndCenterImageInScrollView(image: UIImage) {
         let minZoomScale = scrollView.minimumZoomScale
         let maxZoomScale = scrollView.maximumZoomScale

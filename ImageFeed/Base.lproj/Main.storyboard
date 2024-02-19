@@ -116,7 +116,6 @@
         <!--Single View Controller-->
         <scene sceneID="dSU-95-ZJY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CKI-S3-p0e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController modalPresentationStyle="fullScreen" id="x3L-U3-Oto" customClass="SingleViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dzb-Sa-GS2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -153,10 +152,10 @@
                                     <action selector="backButton:" destination="x3L-U3-Oto" eventType="touchUpInside" id="DuS-3M-n5h"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhD-n3-E8y">
-                                <rect key="frame" x="173.66666666666666" y="786" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhD-n3-E8y">
+                                <rect key="frame" x="171" y="751" width="51" height="51"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="Sharing"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vib-Qm-VZG"/>
@@ -165,7 +164,7 @@
                             <constraint firstItem="QrC-DE-TLf" firstAttribute="top" secondItem="dzb-Sa-GS2" secondAttribute="top" id="64y-P9-8Ig"/>
                             <constraint firstItem="Vib-Qm-VZG" firstAttribute="trailing" secondItem="QrC-DE-TLf" secondAttribute="trailing" id="GkJ-sb-sH9"/>
                             <constraint firstItem="QrC-DE-TLf" firstAttribute="leading" secondItem="Vib-Qm-VZG" secondAttribute="leading" id="HFy-TE-dPI"/>
-                            <constraint firstItem="Vib-Qm-VZG" firstAttribute="bottom" secondItem="RhD-n3-E8y" secondAttribute="bottom" constant="36" id="IKn-Ol-aWI"/>
+                            <constraint firstItem="Vib-Qm-VZG" firstAttribute="bottom" secondItem="RhD-n3-E8y" secondAttribute="bottom" constant="50" id="IKn-Ol-aWI"/>
                             <constraint firstItem="RhD-n3-E8y" firstAttribute="centerX" secondItem="Vib-Qm-VZG" secondAttribute="centerX" id="UGD-He-RtC"/>
                             <constraint firstAttribute="bottom" secondItem="QrC-DE-TLf" secondAttribute="bottom" id="b8z-3d-jQR"/>
                             <constraint firstItem="pTy-l1-7Rs" firstAttribute="leading" secondItem="Vib-Qm-VZG" secondAttribute="leading" constant="8" id="fJ4-yR-Dcp"/>
@@ -178,6 +177,7 @@
                         <outlet property="scrollView" destination="QrC-DE-TLf" id="FI4-sG-8DG"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CKI-S3-p0e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1900" y="-257.04225352112678"/>
         </scene>
@@ -281,6 +281,7 @@
     <resources>
         <image name="0" width="200" height="132"/>
         <image name="ActiveLikeButton" width="42" height="42"/>
+        <image name="Sharing" width="51" height="51"/>
         <image name="avatar" width="70" height="70"/>
         <image name="backward" width="24" height="24"/>
         <image name="feed" width="75" height="49"/>
