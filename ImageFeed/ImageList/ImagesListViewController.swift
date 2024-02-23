@@ -41,7 +41,7 @@ class ImagesListViewController: UIViewController {
             }
             
             let imageName = photosName[indexPath.row]
-            let image = UIImage(named: "\(imageName)_full_size") ?? UIImage(named: imageName)
+            let image = UIImage(named: imageName)
             viewController.image = image
             
         } else {
