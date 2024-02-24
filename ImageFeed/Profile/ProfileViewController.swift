@@ -18,6 +18,7 @@ final class ProfileViewController: UIViewController {
     private func createUserInfo() {
         userName.text = "Екатерина Новикова"
         userName.font = UIFont(name: "Yandex Sans Display Bold", size: 23)
+        userName.textColor = .white
         
         userLogin.text = "@ekaterina_nov"
         userLogin.textColor = UIColor.ypGray
@@ -25,6 +26,7 @@ final class ProfileViewController: UIViewController {
         
         userDescription.text = "Hello, world!"
         userDescription.font = UIFont(name: "Yandex Sans Display", size: 13)
+        userDescription.textColor = .white
         
         userName.translatesAutoresizingMaskIntoConstraints = false
         userLogin.translatesAutoresizingMaskIntoConstraints = false
