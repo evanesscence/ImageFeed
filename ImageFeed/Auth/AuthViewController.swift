@@ -2,9 +2,22 @@ import Foundation
 import UIKit
 
 final class AuthViewController: UIViewController {
+    private let ShowWebViewSegueIdentifier = "ShowWebView"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureBackButton()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == ShowWebViewSegueIdentifier {
+            guard let webViewViewController = segue.destination as? WebViewViewController else {
+                fatalError("Failed to prepare for \(ShowWebViewSegueIdentifier)")
+            }
+            webViewViewController.delegate = self
+        } else {
+            super.prepare(for: segue, sender: sender)
+        }
     }
     
     private func configureBackButton() {
@@ -17,10 +30,10 @@ final class AuthViewController: UIViewController {
 
 extension AuthViewController: WebViewViewControllerDelegate {
     func webViewViewControllerDidCancel(_ vc: WebViewViewController) {
-        <#code#>
+        //TODO: process code
     }
     
     func webViewViewController(_ vc: WebViewViewController, didAuthenticateWithCode code: String) {
-        <#code#>
+        dismiss(animated: true)
     }
 }

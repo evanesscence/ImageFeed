@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iaA-0D-2mf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MS7-xo-Yof">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -269,24 +269,32 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VcC-0y-VPS">
+                                <rect key="frame" x="0.0" y="103" width="393" height="4"/>
+                                <color key="progressTintColor" name="YP Black"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qTJ-eI-VBh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="QDI-BA-FlW" secondAttribute="bottom" id="4Zn-vi-wNv"/>
                             <constraint firstItem="QDI-BA-FlW" firstAttribute="top" secondItem="qTJ-eI-VBh" secondAttribute="top" id="Kuf-jH-Syr"/>
+                            <constraint firstItem="VcC-0y-VPS" firstAttribute="leading" secondItem="qTJ-eI-VBh" secondAttribute="leading" id="SIE-J9-QQd"/>
                             <constraint firstAttribute="trailing" secondItem="QDI-BA-FlW" secondAttribute="trailing" id="eDV-Id-b7m"/>
                             <constraint firstItem="QDI-BA-FlW" firstAttribute="leading" secondItem="ggO-nJ-Sch" secondAttribute="leading" id="ekC-lZ-3Ez"/>
+                            <constraint firstItem="VcC-0y-VPS" firstAttribute="top" secondItem="qTJ-eI-VBh" secondAttribute="top" id="hrW-qL-vFe"/>
+                            <constraint firstItem="qTJ-eI-VBh" firstAttribute="trailing" secondItem="VcC-0y-VPS" secondAttribute="trailing" id="pmJ-AC-W6k"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rnr-5p-9Av"/>
                     <connections>
+                        <outlet property="progressView" destination="QDI-BA-FlW" id="pXO-fE-Xoi"/>
                         <outlet property="webView" destination="QDI-BA-FlW" id="4xk-jE-dzp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="po1-V1-Fhw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3650" y="411"/>
+            <point key="canvasLocation" x="3649.6183206106871" y="410.56338028169017"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="qQw-i4-20a">
