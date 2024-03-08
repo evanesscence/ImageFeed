@@ -210,7 +210,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auth_screen_logo" translatesAutoresizingMaskIntoConstraints="NO" id="dAv-mx-CFm">
-                                <rect key="frame" x="166.66666666666666" y="430.66666666666669" width="60" height="60"/>
+                                <rect key="frame" x="166.66666666666666" y="396" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="AHp-Qb-yBw"/>
                                     <constraint firstAttribute="height" constant="60" id="JjB-CN-uYt"/>
@@ -242,8 +242,8 @@
                         <constraints>
                             <constraint firstItem="Wxb-on-zbV" firstAttribute="leading" secondItem="U3O-eS-eOB" secondAttribute="leading" constant="16" id="9N9-WP-GU4"/>
                             <constraint firstItem="U3O-eS-eOB" firstAttribute="trailing" secondItem="Wxb-on-zbV" secondAttribute="trailing" constant="16" id="HMs-jh-Ljy"/>
-                            <constraint firstItem="dAv-mx-CFm" firstAttribute="centerX" secondItem="U3O-eS-eOB" secondAttribute="centerX" id="Ia4-Gi-MIe"/>
-                            <constraint firstItem="dAv-mx-CFm" firstAttribute="centerY" secondItem="U3O-eS-eOB" secondAttribute="centerY" id="fp4-sv-MKJ"/>
+                            <constraint firstItem="dAv-mx-CFm" firstAttribute="centerY" secondItem="RJ5-1b-YWz" secondAttribute="centerY" id="muj-1p-6an"/>
+                            <constraint firstItem="dAv-mx-CFm" firstAttribute="centerX" secondItem="RJ5-1b-YWz" secondAttribute="centerX" id="sCD-J4-h9P"/>
                             <constraint firstItem="U3O-eS-eOB" firstAttribute="bottom" secondItem="Wxb-on-zbV" secondAttribute="bottom" constant="90" id="zzL-ik-b5s"/>
                         </constraints>
                     </view>
@@ -288,7 +288,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="rnr-5p-9Av"/>
                     <connections>
-                        <outlet property="progressView" destination="QDI-BA-FlW" id="pXO-fE-Xoi"/>
+                        <outlet property="progressView" destination="VcC-0y-VPS" id="ZyV-hh-jkd"/>
                         <outlet property="webView" destination="QDI-BA-FlW" id="4xk-jE-dzp"/>
                     </connections>
                 </viewController>
