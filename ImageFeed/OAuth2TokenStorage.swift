@@ -1,12 +1,9 @@
 import Foundation
 
 class OAuth2TokenStorage {
-    var token: OAuthToken {
+    var token: String? {
         get {
-            guard let token = userDefaults.object(forKey: "token") as? OAuthToken else {
-                return .init()
-            }
-            return token
+            userDefaults.string(forKey: "token")
         }
         
         set {

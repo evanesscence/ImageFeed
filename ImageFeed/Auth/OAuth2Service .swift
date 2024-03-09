@@ -2,7 +2,6 @@ import Foundation
 
 final class OAuth2Service {
     static let shared = OAuth2Service()
-    var token = OAuth2TokenStorage().token
     private init() {}
     
     func makeOAuthTokenRequest(code: String) -> URLRequest {
@@ -31,8 +30,8 @@ final class OAuth2Service {
             case .success(let data):
                 do {
                     let json = try JSONDecoder().decode(OAuthToken.self, from: data)
-                    token = json
-                    print(json)
+                    OAuth2TokenStorage().token = json.access_token
+                    
                 } catch {
                     print(error)
                 }

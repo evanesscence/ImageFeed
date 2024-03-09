@@ -14,6 +14,7 @@ final class WebViewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         print(NSHomeDirectory())
         webView.navigationDelegate = self
         
