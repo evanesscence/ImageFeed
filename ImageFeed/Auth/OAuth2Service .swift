@@ -23,8 +23,7 @@ final class OAuth2Service {
     func fetchOAuthToken(_ code: String) {
         let request = makeOAuthTokenRequest(code: code)
         
-        URLSession.shared.data(for: request) { [weak self] result in
-            guard let self = self else { return }
+        URLSession.shared.data(for: request) { result in
     
             switch result {
             case .success(let data):
