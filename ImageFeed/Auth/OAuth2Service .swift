@@ -4,7 +4,7 @@ final class OAuth2Service {
     static let shared = OAuth2Service()
     private init() {}
     
-    func makeOAuthTokenRequest(code: String) -> URLRequest {
+    private func makeOAuthTokenRequest(code: String) -> URLRequest {
         guard var urlComponents = URLComponents(string: "https://unsplash.com/oauth/token") else { preconditionFailure("Error") }
         urlComponents.queryItems = [
             URLQueryItem(name: "client_id", value: Constants.accessKey),
@@ -20,26 +20,22 @@ final class OAuth2Service {
         return request
     }
     
-    func fetchOAuthToken(_ code: String) {
+    func fetchOAuthToken(_ code: String, completion: @escaping (Result<String, Error>) -> Void) {
         let request = makeOAuthTokenRequest(code: code)
         
         URLSession.shared.data(for: request) { result in
-    
             switch result {
             case .success(let data):
                 do {
-                    let json = try JSONDecoder().decode(OAuthToken.self, from: data)
-                    OAuth2TokenStorage().token = json.access_token
-                    
+                    let oauthToken = try JSONDecoder().decode(OAuthToken.self, from: data)
+                    guard let accessToken = oauthToken.accessToken else { return }
+                    completion(.success(accessToken))
                 } catch {
-                    print(error)
+                    completion(.failure(error))
                 }
-                
             case .failure(let error):
-                print(error)
+                completion(.failure(error))
             }
-            
         }.resume()
-        
     }
 }

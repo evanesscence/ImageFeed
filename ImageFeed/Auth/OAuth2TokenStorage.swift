@@ -10,6 +10,6 @@ class OAuth2TokenStorage {
             userDefaults.set(newValue, forKey: "token")
         }
     }
-    
+
     private let userDefaults = UserDefaults.standard
 }

@@ -1,6 +1,7 @@
 import UIKit
 
 final class ProfileViewController: UIViewController {
+    
     private let userName = UILabel()
     private let userLogin = UILabel()
     private let userDescription = UILabel()

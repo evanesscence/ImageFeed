@@ -1,10 +1,10 @@
 import Foundation
 import UIKit
 
-class SplashViewController: UIViewController {
+final class SplashViewController: UIViewController {
+    
     private let storage = OAuth2TokenStorage()
     private let oauth2Service = OAuth2Service.shared
-    
     private let showAuthenticationScreenIdentifier = "ShowAuthenticationScreen"
 
     override func viewDidAppear(_ animated: Bool) {
@@ -28,7 +28,6 @@ extension SplashViewController {
                 assertionFailure("Failed to prepare for \(showAuthenticationScreenIdentifier)")
                 return
             }
-            
             viewController.delegate = self
         } else {
             super.prepare(for: segue, sender: sender)
@@ -44,7 +43,6 @@ extension SplashViewController: AuthViewControllerDelegate {
         }
     }
     
-    
     private func switchToTabBarController() {
         guard let window = UIApplication.shared.windows.first else {
             assertionFailure("Invalid window configuration")
@@ -52,7 +50,6 @@ extension SplashViewController: AuthViewControllerDelegate {
         }
         
         let tabBarController = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "TabBarViewController")
-           
         window.rootViewController = tabBarController
     }
 }

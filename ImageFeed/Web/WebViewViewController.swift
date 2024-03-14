@@ -14,8 +14,6 @@ final class WebViewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(NSHomeDirectory())
         webView.navigationDelegate = self
         
         guard var urlComponents = URLComponents(string: WebViewConstants.unsplashAuthorizeURLString) else { return }
@@ -31,12 +29,12 @@ final class WebViewViewController: UIViewController {
         webView.load(request)
         
         updateProgress()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
+        
         updateProgress()
     }
     
